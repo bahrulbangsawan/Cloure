@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.d3ifcool.cloure.PickExerciseActivity"
+    android:paddingBottom="24dp"
+    android:orientation="vertical"
+    style="@style/background_style">
+
+    <RelativeLayout
+        style="@style/header_style"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/pick_exercise_picked_exercise_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/pick_exercise_picked_exercise_name"
+            android:layout_toRightOf="@id/pick_exercise_picked_exercise_name"
+            android:inputType="number"
+            android:textColor="@color/my_text_color"
+            android:textSize="16sp"
+            tools:text="0" />
+
+        <EditText
+            android:id="@+id/pick_exercise_picked_exercise_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_toEndOf="@id/pick_exercise_picked_exercise_time_text"
+            android:layout_toRightOf="@id/pick_exercise_picked_exercise_time_text"
+            android:inputType="number"
+            android:textColor="@color/my_text_color"
+            android:textSize="16sp"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/pick_exercise_picked_exercise_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/pick_exercise_picked_exercise_time"
+            android:layout_toRightOf="@id/pick_exercise_picked_exercise_time"
+            android:text="@string/seconds"
+            android:textColor="@color/my_text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/pick_exercise_picked_exercise_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/pick_exercise"
+            android:textColor="@color/my_text_color"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/pick_exercise_picked_exercise_quantity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/pick_exercise_picked_exercise_quantity"
+            android:layout_toRightOf="@id/pick_exercise_picked_exercise_quantity"
+            android:text="@string/times"
+            android:textColor="@color/my_text_color"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:id="@+id/pick_exercise_list">
+    </ListView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.25"
+        android:gravity="bottom">
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="100dp"
+            android:background="@null"
+            android:src="@drawable/ok_button"
+            android:scaleType="centerInside"
+            android:id="@+id/pick_exercise_OK_button"
+            android:contentDescription="@string/set"/>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:background="@null"
+            android:src="@drawable/cancel_button"
+            android:scaleType="centerInside"
+            android:layout_toRightOf="@id/pick_exercise_OK_button"
+            android:layout_toEndOf="@id/pick_exercise_OK_button"
+            android:id="@+id/pick_exercise_cancel_button"
+            android:contentDescription="@string/cancel"/>
+    </RelativeLayout>
+
+</LinearLayout>
